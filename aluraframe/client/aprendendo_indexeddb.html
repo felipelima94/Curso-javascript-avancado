@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var openRequest = window.indexedDB.open('aluraframe', 1);
+
+        openRequest.onupgradeneeded = (e) => {
+            console.log('Criado ou alterado um banco');
+        }
+        openRequest.onsuccess = (e) => {
+            console.log('Conecxão obtida com sucesso');
+        }
+        openRequest.onerror = (e) => {
+            console.log(e.target.error);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
