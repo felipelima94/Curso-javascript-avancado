@@ -17,4 +17,8 @@ class DateHelper {
              
         return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
     }
+
+    static dateNow(data) {
+        return `${data.getFullYear()}-${data.getMonth()+1}-${data.getDate()}`;
+    }
 }
